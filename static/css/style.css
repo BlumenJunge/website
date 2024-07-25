@@ -1,0 +1,345 @@
+
+
+body {
+	font-family: sans;
+}
+
+@media only screen and (min-width: 800px) {
+	body {
+		margin: auto;
+		max-width: 1200px;
+	}
+}
+
+p {
+	text-indent: 2em;
+}
+
+nav {
+	z-index: 100;
+}
+
+h1 {
+	text-align: center;
+}
+
+
+
+header {
+	margin: auto;
+	vertical-align: center;
+	text-align: center;
+}
+
+header h1 {
+	display: inline;
+	font-size: 1.2em;
+}
+
+
+@media only screen and (min-width: 701px) {
+	.nonindex li {
+		display: inline;
+	}
+
+	.nonindex li::after {
+		content: " ⋄";
+	}
+
+	.nonindex li:first-child::after {
+		content: " ☆";
+	}
+
+	.nonindex li:last-child::after {
+		content: "";
+	}
+}
+
+
+@media only screen and (max-width: 1050px) {
+	.nonindex nav {
+		text-align: center;
+		padding-top: 60px;
+	}
+}
+
+
+@media only screen and (max-width: 800px) {
+	.nonindex nav {
+		padding-top: 0;
+		text-align: right;
+	}
+}
+
+
+@media only screen and (max-width: 700px) {
+	.nonindex nav {
+		text-align: left;
+		padding-top: 60px;
+		padding-left: 40px;
+	}
+
+	.nonindex li {
+		list-style-type: none;
+	}
+}
+
+
+
+@media only screen and (min-width: 801px) {
+	footer li {
+		display: inline;
+	}
+
+	footer li::after {
+		content: " —";
+	}
+
+	footer li:last-child::after {
+		content: "";
+	}
+
+	footer {
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	footer {
+		text-align: right;
+		margin-right: 50px;
+		margin-left: auto;
+		width: 5em;
+	}
+
+	footer ul {
+		list-style-type: "⋄ ";
+	}
+}
+
+
+
+.rahmen {
+	position: absolute;
+	pointer-events: none;
+}
+
+#rahmen-d,#rahmen-m {
+	width: 300px;
+}
+
+#rahmen-sl,#rahmen-sr {
+	width: 200px;
+}
+
+
+@media only screen and (min-width: 801px) {
+	#rahmen-m {
+		left: 0;
+		top: 0;
+	}
+	#rahmen-d {
+		right: 0;
+		top: 0;
+	}
+	#rahmen-sl {
+		bottom: 0;
+		left: 0;
+	}
+	#rahmen-sr {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+
+@media only screen and (max-width: 800px) {
+	#rahmen-m {
+		left: 0;
+	}
+
+	#rahmen-d {
+		display: none;
+	}
+
+	#rahmen-sr {
+		display: none;
+	}
+
+	#rahmen-sl {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+hr {
+    height: 15px;
+    border: 0;
+    background: url("../img/ornaments/hr.min.png");
+}
+
+
+
+#ujo {
+	background-color: beige;
+	position: relative;
+	min-height: 520px;
+	padding-bottom: 5em;
+}
+
+#ene {
+	padding: 70px;
+	padding-top: 0;
+	padding-left: 60px;
+	padding-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 800px) {
+	#ene {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+
+@media only screen and (min-width: 800px) {
+	.ueber {
+		text-align: center;
+		column-count: 2;
+		column-rule-style: dotted;
+	}
+
+	main hr {
+		display: none;
+	}
+}
+
+
+
+#fedi {
+	overflow-y: scroll;
+	overflow-x: clip;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	max-height: 40em;
+	max-width: 30em;
+
+	font-size: .8em;
+}
+
+.comment {
+	display: block;
+	padding: .5em;
+	max-width: 40em;
+	border: 1px solid gray;
+	border-radius: 10px;
+
+}
+
+.comment p {
+	text-indent: 0;
+}
+
+.comment ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.comment li {
+	margin: 32px 0;
+}
+.comment article {
+	max-width: 600px;
+}
+.comment ul ul {
+	margin-left: 64px;
+}
+.comment .avatar {
+	width: 50px;
+	height: 50px;
+	border-radius: 6px;
+	float: left;
+	margin-right: 140px;
+	box-shadow: 0 0 1px #0009;
+}
+.comment .user {
+	color: currentColor;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+.comment .author {
+	position: absolute;
+	left: 35px;
+	top: 35px;
+	background: white;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	color: gray;
+}
+.comment .user:hover .username {
+	text-decoration: underline;
+}
+.comment .username {
+	margin-right: .5em;
+}
+.comment .useraddress {
+	color: gray;
+	font-size: small;
+	font-style: normal;
+}
+.comment time {
+	font-size: .95em;
+}
+.comment .address {
+	color: currentColor;
+	text-decoration: none;
+	display: block;
+	margin-top: .25em;
+}
+.comment .address:hover {
+	text-decoration: underline;
+}
+.comment section {
+	margin-top: .5em;
+	margin-left: 64px;
+	line-height: 1.5;
+}
+.comment section p {
+	margin: 0.5em 0;
+}
+.comment .comment-counts {
+	display: flex;
+	column-gap: 1em;
+	font-size: small;
+}
+.comment .comment-counts > span {
+	display: flex;
+	align-items: center;
+	column-gap: .3em;
+	color: gray;
+}
+
+.comment figure, .comment figure img {
+	max-width: 200px;
+}
+
+.comment .emoji {
+	width: 1.5em;
+}
+
+.comment .attachment {
+	padding: .4em;
+	display: inline-block;
+	border: 1px solid gray;
+	border-radius: 10px;
+}
